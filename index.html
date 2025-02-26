@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Hannah Lee</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playfair+Display&family=Playpen+Sans:wght@500&family=Poppins:wght@500&family=Raleway:wght@500&family=Share+Tech&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        #about_pic {
+            width: 500px;
+            height: 500px;
+            float: left;
+            border-radius: 50%;
+            object-fit: cover;
+            padding: 50px;
+            box-sizing: border-box;
+            margin-right: 20px;
+            margin-top: 0px; 
+        }
+
+        #content {
+            display: flex;
+            justify-content: center; 
+            padding: 20px;
+            height: 400px;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 50%;
+            margin: 0 auto; 
+            margin-top: 0px; 
+        }
+
+        .text {
+            font-size: 5em;
+            letter-spacing: 5px;
+            font-family: 'share tech mono', cursive;
+            border-right: 5px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 5s steps(17) forwards, cursor .5s infinite;
+            margin-top: 10px; 
+        }
+
+        @keyframes cursor {
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: black;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 35%;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30vh; 
+            margin-top: 60px; 
+        }
+
+        #about {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            line-height: 40px;
+            width: 500px;
+            height: 300px;
+            padding-left: 50px;
+            margin-right: 50px;
+            margin-top: 0px;
+        }
+
+        #linked_pic, #mail_pic, #git_pic, #resume_pic {
+            width: 50px;
+            height: auto;
+            float: right;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+
+        #contacts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #contacts-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0px; 
+        }
+
+        #contacts img {
+            width: 60px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        #formatting {
+            display: flex;
+            flex-direction: row;
+            justify-content: center; 
+            margin-top: -140px; 
+            margin-bottom: 20px; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="text">Hey There!</p>
+    </div>
+
+    <div id="header">
+        <a href="index.html">Hannah Lee</a>
+    </div>
+
+    <div id="navbar">
+        <div id="nav">
+            <ul>
+                <li><a href="Experiences.html#Experiences">Experiences</a></li>
+                <li><a href="Projects.html#Projects">Projects</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="formatting">
+            <img id="about_pic" src="images/Hannah_Lee.PNG" alt="img1">
+            <div id="content">
+                <div id="about">
+                    <p>I'm Hannah. I am an aspiring product manager who loves tackling real-world problems and building from the ground up.
+                        I'm a recent graduate from the University of Southern California with a B.S. in Business Administration and a specialization in web development. I thrive in the startup space and I am always open to learn and create new products! Check out below for my socials!</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="contacts-container">
+            <div id="contacts">
+                <a href="https://www.linkedin.com/in/hannahlee127/">
+                    <img id="linked_pic" src="images/in.png" alt="in">
+                </a>
+
+                <a href="mailto:hlee2543@usc.edu">
+                    <img id="mail_pic" src="images/mail.png" alt="ml">
+                </a>
+
+                <a href="images/resume.pdf" target="_blank">
+                    <img id="resume_pic" src="images/resume.png" alt="res">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+           
+            $('#navbar').hover(function () {
+               
+                $(this).animate({ marginTop: '-=5px' }, 100)
+                    .animate({ marginTop: '+=5px' }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Hannah Lee</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playfair+Display&family=Playpen+Sans:wght@500&family=Poppins:wght@500&family=Raleway:wght@500&family=Share+Tech&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <style>
+     
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .project-card {
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+            margin-bottom: 30px;
+        }
+        
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 15px;
+        }
+        
+        .project-card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .card-front {
+            display: flex;
+            flex-direction: column;
+            background-color: #ffd8b1;
+        }
+        
+        .card-back {
+            background-color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            color: black;
+        }
+        
+        .card-image {
+            height: 60%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+        
+        .card-title {
+            height: 40%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .card-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+        
+        .tag {
+            background-color: #cfefc9;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 28px;
+            position: relative;
+        }
+        
+        .page-title:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: #cfefc9;
+        }
+        
+      
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #ffd8b1;
+            color: #333;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .project-link:hover {
+            background-color: #cfefc9;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .project-link:active {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <a href="index.html">Hannah Lee</a>
+    </div>
+
+    <div id="navbar">
+        <div id="nav">
+            <ul>
+                <li><a href="Experiences.html#Experiences">Experiences</a></li>
+                <li><a href="Projects.html#Projects">Projects</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="body">
+        <h1 class="page-title">My Projects</h1>
+        
+        <div class="projects-container">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-image" style="background-image: url('images/spotify.png');"></div>
+                        <div class="card-title">Spotify</div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Spotify Song Analysis</h3>
+                        <div class="card-description">
+                            <p>Used R and excel to analyze factors influencing song popularity on Spotify. Utilized linear regression and heat maps to find which factors have the highest amount of listens.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">R Programming</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Music</span>
+                        </div>
+                       <a href="links/Spotify.pdf" class="project-link">View Project</a>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-image" style="background-image: url('images/claires.png');"></div>
+                        <div class="card-title">Claire's Place Foundation</div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Email Campaign Analysis</h3>
+                        <div class="card-description">
+                            <p>Conducted data analysis on donation patterns for Claire's Place Foundation's email campaigns. Identified key factors that drive donor engagement and optimized outreach strategies.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">RStudio</span>
+                            <span class="tag">Nonprofit</span>
+                            <span class="tag">Email Marketing</span>
+                        </div>
+                        <a href="links/Claire's_Place.pdf" class="project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-image" style="background-image: url('images/motorola.png');"></div>
+                        <div class="card-title">Motorola Miracle</div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Motorola Company Analysis</h3>
+                        <div class="card-description">
+                            <p>Conducted a business analysis for Motorola, recommending smart acquisitions and healthcare integration for
+                                optimal growth.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">Consulting</span>
+                            <span class="tag">Business Analysis</span>
+                            <span class="tag">Acquisitions</span>
+                        </div>
+                        <a href="links/Motorola_Miracle.pdf" class="project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 4 -->
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="card-image" style="background-image: url('images/BAM!.png');"></div>
+                        <div class="card-title">BAM!</div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Band At USC</h3>
+                        <div class="card-description">
+                            <p>Started a band with my closest friends where we built our band from the ground up from financing equipment, managing gigs, creating our band logo and presence.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">Guitar</span>
+                            <span class="tag">Budget Planning</span>
+                            <span class="tag">Brand Management</span>
+                        </div>
+                        <a href="https://www.instagram.com/uscbam/reels/?__d=1" class="project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        $(document).ready(function() {
+           
+            $('#navbar').hover(function() {
+              
+                $(this).animate({ marginTop: '-=5px' }, 100)
+                       .animate({ marginTop: '+=5px' }, 100);
+            });
+            
+          
+            $('.project-card').each(function(index) {
+                $(this).css({
+                    'opacity': 0,
+                    'transform': 'translateY(20px)'
+                });
+                
+                setTimeout(() => {
+                    $(this).animate({
+                        'opacity': 1,
+                        'transform': 'translateY(0)'
+                    }, 500);
+                }, index * 200);
+            });
+            
+            
+            $('.project-card').on('mouseenter', function() {
+                setTimeout(() => {
+                    $(this).find('.project-link').animate({
+                        opacity: 0.8
+                    }, 300).animate({
+                        opacity: 1
+                    }, 300);
+                }, 500); 
+            });
+        });
+    </script>
+</body>
+</html>
